@@ -1,5 +1,5 @@
 {% set name = "meteoserver" %}
-{% set version = "0.0.16" %}
+{% set version = "0.0.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/meteoserver-{{ version }}.tar.gz
-  sha256: dd82430ee6e30ffc85045f9c5921b05ad403ec101617ebd4654d14e4ec4cd119
+  sha256: 4ae1178676ae3a610efcdbf79293e462039eabf21ec10e29ae8bef02d2af376f
 
 build:
   noarch: python
