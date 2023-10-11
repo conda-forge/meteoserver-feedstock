@@ -1,11 +1,11 @@
-About meteoserver
-=================
+About meteoserver-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/meteoserver-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/MarcvdSluys/Meteoserver
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/meteoserver-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python module to obtain and read Dutch weather data from Meteoserver.nl
 

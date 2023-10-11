@@ -1,13 +1,15 @@
 {% set name = "meteoserver" %}
-{% set version = "0.0.16" %}
+{% set version = "0.0.17" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/meteoserver-{{ version }}.tar.gz
-  sha256: dd82430ee6e30ffc85045f9c5921b05ad403ec101617ebd4654d14e4ec4cd119
+  url: https://github.com/MarcvdSluys/Meteoserver/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 869b153f04f8761539a9d2aab1f53cc9cc6f2c271a7d9c367f50b958f8e8e799
+  patches:
+    - install_modules.patch
 
 build:
   noarch: python
@@ -16,10 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.6,<3.12
+    - setuptools >=61.0
     - pip
   run:
-    - python >=3.6
+    - python >=3.6,<3.12
     - pandas
     - requests
 
