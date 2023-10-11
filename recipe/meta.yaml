@@ -6,8 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/meteoserver-{{ version }}.tar.gz
-  sha256: 4ae1178676ae3a610efcdbf79293e462039eabf21ec10e29ae8bef02d2af376f
+  url: https://github.com/MarcvdSluys/Meteoserver/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 869b153f04f8761539a9d2aab1f53cc9cc6f2c271a7d9c367f50b958f8e8e799
+  patches:
+    - install_modules.patch
 
 build:
   noarch: python
@@ -16,10 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.6,<3.12
+    - setuptools >=61.0
     - pip
   run:
-    - python >=3.7
+    - python >=3.6,<3.12
     - pandas
     - requests
 
