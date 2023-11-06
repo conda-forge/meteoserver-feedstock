@@ -1,5 +1,5 @@
 {% set name = "meteoserver" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://github.com/MarcvdSluys/Meteoserver/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 869b153f04f8761539a9d2aab1f53cc9cc6f2c271a7d9c367f50b958f8e8e799
-  patches:
-    - install_modules.patch
+  sha256: 1b77a7a79abf6569deb7948a6057c6142b5645453e3f517e962753fe9127648f
 
 build:
   noarch: python
@@ -18,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<3.12
+    - python >=3.7
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.6,<3.12
+    - python >=3.7
     - pandas
     - requests
 
