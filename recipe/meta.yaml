@@ -1,5 +1,5 @@
 {% set name = "meteoserver" %}
-{% set version = "0.0.18" %}
+{% set version = "0.0.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/MarcvdSluys/Meteoserver/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1b77a7a79abf6569deb7948a6057c6142b5645453e3f517e962753fe9127648f
+  sha256: c6dfb246653f2fd1c61d9e88d6352098c569334c099b3e8471974afc7d201d90
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
